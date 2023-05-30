@@ -32,4 +32,8 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+main {
+  margin-top: 250px;
+}
 </style>

@@ -45,16 +45,16 @@ export default {
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12 mx-auto my-0 d-flex flex-column align-items-center p-5">
-                    <img class="globe_1" src="../assets/img/globe1.png" alt="globe-1">
+                    <img class="globe_1 d-none d-md-none d-lg-block " src="../assets/img/globe1.png" alt="globe-1">
                     <h6 class="orange_">Imagine, Create, Experience</h6>
                     <h2 class="text-white">We Animate</h2>
-                    <img class="globe_2" src="../assets/img/globe2.png" alt="globe-2">
-                    <img class="light_" src="../assets/img/light.png" alt="light">
+                    <img class="globe_2  d-none d-md-none d-lg-block " src="../assets/img/globe2.png" alt="globe-2">
+                    <img class="light_ d-none d-md-none d-lg-block " src="../assets/img/light.png" alt="light">
                     <h2 class="text-white my-3">With Ninja-Like Precision</h2>
                     <h6 class="text-white my-3">We are a character-driven animation studio striving to make high-quality
                         animations.</h6>
-                    <img class="leftMan" src="../assets/img/left-man.png" alt="left-man">
-                    <img class="rightMan" src="../assets/img/right-man.png" alt="right-man">
+                    <img class="leftMan d-none d-md-none d-lg-block " src="../assets/img/left-man.png" alt="left-man">
+                    <img class="rightMan d-none d-md-none d-lg-block " src="../assets/img/right-man.png" alt="right-man">
                 </div>
                 <div class="col-sm-12 col-md-4 text-center mb-5">
                     <button type="button" class="btn bg-white btn-sm mx-3 px-4 py-2 rounded-5">Start a Project</button>
@@ -63,7 +63,7 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="container-fluid jumbo_container">
+        <div class="container-fluid jumbo_container d-none d-md-none d-lg-block">
             <div class="jumbo_ mx-auto my-0 rounded-5">
                 <img src="../assets/img/middle.png" alt="middle">
                 <div class="play_ d-flex align-items-center justify-content-center p-5 rounded-circle">

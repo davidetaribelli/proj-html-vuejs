@@ -8,13 +8,26 @@ export default {
     PageHeader,
     PageMain,
     PageFooter
+  },
+  data() {
+    return {
+      linkList: [
+        { link: "Home" },
+        { link: "About Us" },
+        { link: "Portfolio" },
+        { link: "Our Process" },
+        { link: "Pricing" },
+        { link: "Blog" },
+        { link: "Contact" },
+      ]
+    }
   }
 }
 </script>
 
 <template>
   <header>
-    <PageHeader />
+    <PageHeader :linkArray="linkList" />
   </header>
   <main>
     <PageMain />

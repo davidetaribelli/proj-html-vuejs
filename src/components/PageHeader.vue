@@ -1,6 +1,9 @@
 <script>
 export default {
     name: "PageHeader",
+    props: [
+        "linkArray",
+    ],
 }
 </script>
 
@@ -23,13 +26,10 @@ export default {
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                     <div class="navbar-nav">
-                                        <a class="nav-link text-white" href="#">Home</a>
-                                        <a class="nav-link text-white" href="#">Features</a>
-                                        <a class="nav-link text-white" href="#">Pricing</a>
-                                        <a class="nav-link text-white">Disabled</a>
-                                        <a class="nav-link text-white" href="#">Features</a>
-                                        <a class="nav-link text-white" href="#">Pricing</a>
-                                        <a class="nav-link text-white">Disabled</a>
+                                        <a v-for="link in linkArray" class="nav-link text-white" href="#">
+                                            {{ link.link }}
+                                        </a>
+
                                         <button class="bg-white border-0 rounded-4 px-4">Get a Quote</button>
                                     </div>
                                 </div>

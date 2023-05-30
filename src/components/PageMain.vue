@@ -6,11 +6,11 @@ export default {
 
 <template>
     <!-- prima sezione -->
-    <section>
+    <section class="one">
         <div class="container">
             <div class="row">
                 <div class="col-3">
-                    immaginona
+                    <img src="../assets/img/smart.png" alt="smart">
                 </div>
                 <div class="col-8">
                     <div class="row">
@@ -56,7 +56,31 @@ export default {
     </section>
 
     <!-- seconda sezione -->
-    <section></section>
+    <section class="two">
+        <img src="../assets/img/shape-top.png" alt="shape-top">
+        <div class="container-fluid text-center p-5">
+            <h2 class="text-white fs-1">Anidio Quick Facts</h2>
+            <div class="row gap-4 justify-content-center">
+                <div class="col-2 border rounded-3 d-flex flex-wrap align-items-center justify-content-center p-4">
+                    <h2 class="fw-bolder fs-1 text-white">700+</h2>
+                    <small class="orange_">Projects done</small>
+                </div>
+                <div class="col-2 border rounded-3 d-flex flex-wrap align-items-center justify-content-center p-4">
+                    <h2 class="fw-bolder fs-1 text-white">250+</h2>
+                    <small class="orange_">Happy Clients</small>
+                </div>
+                <div class="col-2 border rounded-3 d-flex flex-wrap align-items-center justify-content-center p-4">
+                    <h2 class="fw-bolder fs-1 text-white">25+</h2>
+                    <small class="orange_">Team Members</small>
+                </div>
+                <div class="col-2 border rounded-3 d-flex flex-wrap align-items-center justify-content-center p-4">
+                    <h2 class="fw-bolder fs-1 text-white">12+</h2>
+                    <small class="orange_">Yearsn on the market</small>
+                </div>
+            </div>
+        </div>
+        <img src="../assets/img/shape-bottom.png" alt="shape-bottom">
+    </section>
 
     <!-- terza sezione -->
     <section></section>
@@ -77,28 +101,58 @@ export default {
 <style scoped lang="scss">
 @use '../style/general.scss' as *;
 
-.purple_ {
-    color: $purple;
+.orange_ {
+    color: $orange;
 }
 
-.title_ {
-    width: 500px;
-}
+.one {
+    .col-3 {
+        img {
+            width: 100%;
+        }
+    }
 
-h5 {
-    color: mediumpurple;
-}
+    .purple_ {
+        color: $purple;
+    }
 
-.card {
-    img {
-        width: 50%;
+    .title_ {
+        width: 500px;
+    }
+
+    h5 {
+        color: mediumpurple;
+    }
+
+    .card {
+        img {
+            width: 50%;
+        }
+    }
+
+    .rocket {
+        width: 15%;
+        height: 75%;
+        position: relative;
+        right: -120px;
     }
 }
 
-.rocket {
-    width: 15%;
-    height: 75%;
-    position: relative;
-    right: -120px;
+.two {
+    background-image: url(../assets/img/counter-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    img {
+        width: 100%;
+        display: block
+    }
+
+    .container-fluid {
+        background-image: url(../assets/img/globe1.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50%;
+    }
 }
 </style>

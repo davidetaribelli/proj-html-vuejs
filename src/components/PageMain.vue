@@ -122,7 +122,7 @@ export default {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-6">
-                    immaginona
+                    <img class="thumb_" src="../assets/img/process-thumb.png" alt="process-thumb">
                 </div>
                 <div class="col-6">
                     <div class="row gap-2">
@@ -153,11 +153,11 @@ export default {
                         </div>
                         <div class="col-3 d-flex">
                             <div
-                                class="arrow_ p-3 border rounded-circle d-flex align-items-center justify-content-center m-1">
+                                class="arrow_ p-3 border rounded-circle d-flex align-items-center justify-content-center m-1 text-black-50">
                                 <font-awesome-icon icon="fa-solid fa-arrow-left" />
                             </div>
                             <div
-                                class="arrow_ p-3 border rounded-circle d-flex align-items-center justify-content-center m-1">
+                                class="arrow_ p-3 border rounded-circle d-flex align-items-center justify-content-center m-1 text-black-50">
                                 <font-awesome-icon icon="fa-solid fa-arrow-right" />
                             </div>
                         </div>
@@ -264,6 +264,16 @@ export default {
 }
 
 .four {
+    .col-6 {
+        position: relative;
+
+        .thumb_ {
+            width: 100%;
+            position: absolute;
+            left: -190px;
+        }
+    }
+
     .col-5 {
         .img_ {
             width: 80px;

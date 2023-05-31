@@ -1,7 +1,28 @@
 <script>
 export default {
     name: "PageMain",
-}
+    data() {
+        return {
+            currentCard: 0,
+        }
+    },
+    methods: {
+        changeCardBack() {
+            this.currentCard--;
+            if (this.currentCard < 0) {
+                this.currentCard = 3;
+            }
+            return this.currentCard;
+        },
+        changeCardNext() {
+            this.currentCard++;
+            if (this.currentCard >= 4) {
+                this.currentCard = 0;
+            }
+            return this.currentCard;
+        }
+    },
+}   
 </script>
 
 <template>
@@ -131,32 +152,68 @@ export default {
                             <h2 class="fs-1 fw-bold purple_">Our Process for Your Animation Production</h2>
                             <p class="fw-lighter">We have an effective process for working on animation</p>
                         </div>
-                        <div class="col-5 text-center border rounded-5 p-4 d-flex flex-column align-items-center">
+                        <div v-if="currentCard == 0"
+                            class="col-5 text-center border rounded-5 p-4 flex-column align-items-center">
                             <div class="img_ p-3 rounded-circle">
-                                <img src="../assets/img/process2.png" alt="smart-2">
+                                <img src="src/assets/img/process2.png" alt="process-2">
+                                <div class="number_ p-2 d-flex align-items-end text-black-50 rounded-bottom">
+                                    <small>1</small>
+                                </div>
                             </div>
-                            <h3 class="purple_ my-3">Pre- Production</h3>
+                            <h3 class="purple_ my-3">Pre-Production</h3>
                             <p class="fw-lighter">
-                                We'Il take your idea and create a technical script which consists of action notes
-                                and animation descriptions.
+                                We'll take your idea and create a technical script which consists of action notes and
+                                animation descriptions.
                             </p>
                         </div>
-                        <div class="col-5 text-center border rounded-5 p-4 d-flex flex-column align-items-center">
+                        <div v-else-if="currentCard == 1"
+                            class="col-5 text-center border rounded-5 p-4 flex-column align-items-center">
                             <div class="img_ p-3 rounded-circle">
-                                <img src="../assets/img/process1.png" alt="smart-1">
+                                <img src="src/assets/img/process1.png" alt="process-1">
+                                <div class="number_ p-2 d-flex align-items-end text-black-50 rounded-bottom">
+                                    <small>2</small>
+                                </div>
                             </div>
-                            <h3 class="purple_ my-3">Scripting</h3>
+                            <h3 class="purple_ my-3">Pre-Production</h3>
                             <p class="fw-lighter">
-                                We'Il take your idea and create a technical script which consists of action notes
-                                and animation descriptions.
+                                We'll take your idea and create a technical script which consists of action notes and
+                                animation descriptions.
                             </p>
                         </div>
-                        <div class="col-3 d-flex">
-                            <div
+                        <div v-else-if="currentCard == 2"
+                            class="col-5 text-center border rounded-5 p-4 flex-column align-items-center">
+                            <div class="img_ p-3 rounded-circle">
+                                <img src="src/assets/img/process2.png" alt="process-2">
+                                <div class="number_ p-2 d-flex align-items-end text-black-50 rounded-bottom">
+                                    <small>3</small>
+                                </div>
+                            </div>
+                            <h3 class="purple_ my-3">Pre-Production</h3>
+                            <p class="fw-lighter">
+                                We'll take your idea and create a technical script which consists of action notes and
+                                animation descriptions.
+                            </p>
+                        </div>
+                        <div v-else-if="currentCard == 3"
+                            class="col-5 text-center border rounded-5 p-4 flex-column align-items-center">
+                            <div class="img_ p-3 rounded-circle">
+                                <img src="src/assets/img/process1.png" alt="process-1">
+                                <div class="number_ p-2 d-flex align-items-end text-black-50 rounded-bottom">
+                                    <small>4</small>
+                                </div>
+                            </div>
+                            <h3 class="purple_ my-3">Pre-Production</h3>
+                            <p class="fw-lighter">
+                                We'll take your idea and create a technical script which consists of action notes and
+                                animation descriptions.
+                            </p>
+                        </div>
+                        <div class="col-12 d-flex">
+                            <div @click="changeCardBack"
                                 class="arrow_ p-3 border rounded-circle d-flex align-items-center justify-content-center m-1 text-black-50">
                                 <font-awesome-icon icon="fa-solid fa-arrow-left" />
                             </div>
-                            <div
+                            <div @click="changeCardNext"
                                 class="arrow_ p-3 border rounded-circle d-flex align-items-center justify-content-center m-1 text-black-50">
                                 <font-awesome-icon icon="fa-solid fa-arrow-right" />
                             </div>
@@ -275,6 +332,9 @@ export default {
     }
 
     .col-5 {
+        position: relative;
+        display: flex;
+
         .img_ {
             width: 80px;
             height: 80px;
@@ -284,6 +344,14 @@ export default {
                 object-fit: contain;
                 width: 100%;
                 height: 100%;
+            }
+
+            .number_ {
+                height: 20%;
+                background-color: $light_violet;
+                position: absolute;
+                top: 0;
+                right: 12%;
             }
         }
     }

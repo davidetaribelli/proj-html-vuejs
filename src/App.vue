@@ -19,7 +19,9 @@ export default {
         { link: "Pricing" },
         { link: "Blog" },
         { link: "Contact" },
-      ]
+      ],
+
+
     }
   }
 }

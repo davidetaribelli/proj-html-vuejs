@@ -21,23 +21,23 @@ export default {
                 </div>
                 <!-- card -->
                 <div class="col-12  d-flex gap-2 flex-wrap justify-content-center">
-                    <div class="col-12 col-lg-3 border rounded-5 p-3 text-center">
+                    <div id="bg_orange_gradient" class="col-12 col-lg-3 border rounded-5 p-3 text-center">
                         <img src="../assets/img/smart1.png" alt="smart-1">
-                        <h3 class="purple_">3D modeling</h3>
+                        <h3 class="purple_ my-3">3D modeling</h3>
                         <p class="fw-lighter">We constantly ask questions. It helps us shape your story and deliver
                             the results you
                             crave. Yep, we'Il drill deep to deliver above and beyond yout expectacions.</p>
                     </div>
-                    <div class="col-12 col-lg-3 border rounded-5 p-3 text-center">
+                    <div id="bg_purple_gradient" class="col-12 col-lg-3 border rounded-5 p-3 text-center">
                         <img src="../assets/img/smart2.png" alt="smart-2">
-                        <h3 class="purple_">Collaboration</h3>
+                        <h3 class="purple_ my-3">Collaboration</h3>
                         <p class="fw-lighter">We constantly ask questions. It helps us shape your story and deliver
                             the results you
                             crave. Yep, we'Il drill deep to deliver above and beyond yout expectacions.</p>
                     </div>
-                    <div class="col-12 col-lg-3 border rounded-5 p-3 text-center">
+                    <div id="bg_pink_gradient" class="col-12 col-lg-3 border rounded-5 p-3 text-center">
                         <img src="../assets/img/smart3.png" alt="smart-3">
-                        <h3 class="purple_">Creativity</h3>
+                        <h3 class="purple_ my-3">Creativity</h3>
                         <p class="fw-lighter">We constantly ask questions. It helps us shape your story and deliver
                             the results you
                             crave. Yep, we'Il drill deep to deliver above and beyond yout expectacions.</p>
@@ -81,10 +81,91 @@ export default {
     </section>
 
     <!-- terza sezione -->
-    <section></section>
+    <section class="three my-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6 text-center">
+                    <h6 class="fw-light">Our Works</h6>
+                    <h2 class="fw-bolder purple_">Featured Productions</h2>
+                    <p class="fw-lighter">
+                        Here's just small of some of those projects that we're quite proud of. If you're
+                        looking for something specific feel free to get in contact with us
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container my-3">
+            <div class="row gap-2 justify-content-center">
+                <div class="col-5 rounded-3">
+                    <img src="../assets/img/work1.png" alt="work-1">
+                </div>
+                <div class="col-5 rounded-3">
+                    <img src="../assets/img/work2.png" alt="work-2">
+                </div>
+                <div class="col-5 rounded-3">
+                    <img src="../assets/img/work3.png" alt="work-3">
+                </div>
+                <div class="col-5 rounded-3">
+                    <img src="../assets/img/work4.png" alt="work-4">
+                </div>
+                <div class="col-3 text-center my-3">
+                    <button class="border-1 border-light bg-white purple_ px-3 py-1 rounded-5">
+                        See Our Work
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- quarta sezione -->
-    <section></section>
+    <section class="four">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    immaginona
+                </div>
+                <div class="col-6">
+                    <div class="row gap-2">
+                        <div class="col-8">
+                            <h5>Our Process</h5>
+                            <h2 class="fs-1 fw-bold purple_">Our Process for Your Animation Production</h2>
+                            <p class="fw-lighter">We have an effective process for working on animation</p>
+                        </div>
+                        <div class="col-5 text-center border rounded-5 p-4 d-flex flex-column align-items-center">
+                            <div class="img_ p-3 rounded-circle">
+                                <img src="../assets/img/process2.png" alt="smart-2">
+                            </div>
+                            <h3 class="purple_ my-3">Pre- Production</h3>
+                            <p class="fw-lighter">
+                                We'Il take your idea and create a technical script which consists of action notes
+                                and animation descriptions.
+                            </p>
+                        </div>
+                        <div class="col-5 text-center border rounded-5 p-4 d-flex flex-column align-items-center">
+                            <div class="img_ p-3 rounded-circle">
+                                <img src="../assets/img/process1.png" alt="smart-1">
+                            </div>
+                            <h3 class="purple_ my-3">Scripting</h3>
+                            <p class="fw-lighter">
+                                We'Il take your idea and create a technical script which consists of action notes
+                                and animation descriptions.
+                            </p>
+                        </div>
+                        <div class="col-3 d-flex">
+                            <div
+                                class="arrow_ p-3 border rounded-circle d-flex align-items-center justify-content-center m-1">
+                                <font-awesome-icon icon="fa-solid fa-arrow-left" />
+                            </div>
+                            <div
+                                class="arrow_ p-3 border rounded-circle d-flex align-items-center justify-content-center m-1">
+                                <font-awesome-icon icon="fa-solid fa-arrow-right" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- quinta sezione -->
     <section></section>
@@ -103,6 +184,10 @@ export default {
     color: $orange;
 }
 
+.purple_ {
+    color: $purple;
+}
+
 .one {
     background-image: url(../assets/img/smart.png);
     background-repeat: no-repeat;
@@ -115,18 +200,29 @@ export default {
         }
     }
 
+    .col-12 {
+        #bg_orange_gradient {
+            background: rgb(255, 183, 134);
+            background: linear-gradient(0deg, rgba(255, 183, 134, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+
+        #bg_purple_gradient {
+            background: rgb(174, 147, 210);
+            background: linear-gradient(0deg, rgba(174, 147, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+
+        #bg_pink_gradient {
+            background: rgb(255, 222, 255);
+            background: linear-gradient(0deg, rgba(255, 222, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+    }
+
     .purple_ {
         color: $purple;
     }
 
     h5 {
-        color: mediumpurple;
-    }
-
-    .card {
-        img {
-            width: 50%;
-        }
+        color: $violet;
     }
 
     .rocket {
@@ -152,4 +248,35 @@ export default {
         background-position: 50%;
     }
 }
+
+.three {
+    .col-6 {
+        h6 {
+            color: $violet;
+        }
+    }
+
+    .col-5 {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.four {
+    .col-5 {
+        .img_ {
+            width: 80px;
+            height: 80px;
+            background-color: #fff9f5;
+
+            img {
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
 </style>
+

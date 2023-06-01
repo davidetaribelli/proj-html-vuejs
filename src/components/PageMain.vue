@@ -4,22 +4,43 @@ export default {
     data() {
         return {
             currentCard: 0,
+            currentTeam: 0,
         }
     },
     methods: {
-        changeCardBack() {
+        changeCardBack1() {              // creo questi due metodi per far funzionare il primo carosello,
+            ////////////////////////////// andando a modificare il valore di currentCard
             this.currentCard--;
             if (this.currentCard < 0) {
                 this.currentCard = 3;
             }
             return this.currentCard;
         },
-        changeCardNext() {
+        changeCardNext1() {
             this.currentCard++;
             if (this.currentCard >= 4) {
                 this.currentCard = 0;
             }
             return this.currentCard;
+        },
+        changeCardBack2() {              // creo questi due metodi per far funzionare il secondo carosello,
+            ////////////////////////////// andando a modificare il valore di currentTeam
+            this.currentTeam--;
+            if (this.currentTeam < 0) {
+                this.currentTeam = 3;
+            }
+            return this.currentTeam;
+        },
+        changeCardNext2() {
+            this.currentTeam++;
+            if (this.currentTeam >= 4) {
+                this.currentTeam = 0;
+            }
+            return this.currentTeam;
+        },
+        changeCardDot(index) {
+            this.currentTeam = index;
+
         }
     },
 }   
@@ -141,19 +162,19 @@ export default {
     <!-- quarta sezione -->
     <section class="four">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-6">
+            <div class="row justify-content-center">
+                <div class="col-6 d-none d-md-flex">
                     <img class="thumb_" src="../assets/img/process-thumb.png" alt="process-thumb">
                 </div>
                 <div class="col-6">
                     <div class="row gap-2">
-                        <div class="col-8">
+                        <div class="col-12 col-lg-8">
                             <h5>Our Process</h5>
                             <h2 class="fs-1 fw-bold purple_">Our Process for Your Animation Production</h2>
                             <p class="fw-lighter">We have an effective process for working on animation</p>
                         </div>
                         <div v-if="currentCard == 0"
-                            class="col-5 text-center border rounded-5 p-4 flex-column align-items-center">
+                            class="col-12 col-lg-5 text-center border rounded-5 p-4 flex-column align-items-center">
                             <div class="img_ p-3 rounded-circle">
                                 <img src="src/assets/img/process2.png" alt="process-2">
                                 <div class="number_ p-2 d-flex align-items-end text-black-50 rounded-bottom">
@@ -166,8 +187,9 @@ export default {
                                 animation descriptions.
                             </p>
                         </div>
+                        <!--se currentCard è 0 allora visualizzarò questo altrimenti visualizzerò la card successiva-->
                         <div v-else-if="currentCard == 1"
-                            class="col-5 text-center border rounded-5 p-4 flex-column align-items-center">
+                            class="col-12 col-lg-5 text-center border rounded-5 p-4 flex-column align-items-center">
                             <div class="img_ p-3 rounded-circle">
                                 <img src="src/assets/img/process1.png" alt="process-1">
                                 <div class="number_ p-2 d-flex align-items-end text-black-50 rounded-bottom">
@@ -181,7 +203,7 @@ export default {
                             </p>
                         </div>
                         <div v-else-if="currentCard == 2"
-                            class="col-5 text-center border rounded-5 p-4 flex-column align-items-center">
+                            class="col-12 col-lg-5 text-center border rounded-5 p-4 flex-column align-items-center">
                             <div class="img_ p-3 rounded-circle">
                                 <img src="src/assets/img/process2.png" alt="process-2">
                                 <div class="number_ p-2 d-flex align-items-end text-black-50 rounded-bottom">
@@ -195,7 +217,7 @@ export default {
                             </p>
                         </div>
                         <div v-else-if="currentCard == 3"
-                            class="col-5 text-center border rounded-5 p-4 flex-column align-items-center">
+                            class="col-12 col-lg-5 text-center border rounded-5 p-4 flex-column align-items-center">
                             <div class="img_ p-3 rounded-circle">
                                 <img src="src/assets/img/process1.png" alt="process-1">
                                 <div class="number_ p-2 d-flex align-items-end text-black-50 rounded-bottom">
@@ -208,12 +230,139 @@ export default {
                                 animation descriptions.
                             </p>
                         </div>
+                        <!-- i due metodi vengono collegati ai due bottoni tramite @click -->
                         <div class="col-12 d-flex">
-                            <div @click="changeCardBack"
+                            <div @click="changeCardBack1"
                                 class="arrow_ p-3 border rounded-circle d-flex align-items-center justify-content-center m-1 text-black-50">
                                 <font-awesome-icon icon="fa-solid fa-arrow-left" />
                             </div>
-                            <div @click="changeCardNext"
+                            <div @click="changeCardNext1"
+                                class="arrow_ p-3 border rounded-circle d-flex align-items-center justify-content-center m-1 text-black-50">
+                                <font-awesome-icon icon="fa-solid fa-arrow-right" />
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-row-reverse d-none d-md-none d-lg-flex">
+                            <img class="rocket" src="../assets/img/smart4.png" alt="smart-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- quinta sezione -->
+    <section class="five">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-6 text-center my-5">
+                    <h6 class="fw-light">Anidio Magic Team Member</h6>
+                    <h2 class="fw-bolder purple_ fs-1">Let Us Animate Your Project</h2>
+                    <p class="fw-lighter my-4">
+                        We create new worlds! Let's collaborate and create engaging, effective, award-winning animations
+                    </p>
+                </div>
+                <div class="col-12 my-5">
+                    <div class="row justify-content-evenly">
+                        <!-- prima card -->
+                        <div v-if="currentTeam == 0" class="col-12 col-lg-3 rounded-5 p-3 text-center">
+                            <div class="img_ p-3 rounded-circle">
+                                <img src="src/assets/img/team1.png" alt="team-1">
+                            </div>
+                            <div class="info_">
+                                <h3 class="purple_ my-4">Robert Coleman</h3>
+                                <p class="fw-lighter my-4">
+                                    Owner & Creative Director
+                                </p>
+                                <div class="social_ d-flex justify-content-center gap-2 my-4">
+                                    <font-awesome-icon
+                                        class="icon_ p-2 border d-flex justify-content-center align-items-center rounded-circle"
+                                        icon="fa-brands fa-facebook-f" />
+                                    <font-awesome-icon
+                                        class="icon_ p-2 border d-flex justify-content-center align-items-center rounded-circle"
+                                        icon="fa-brands fa-twitter" />
+                                    <font-awesome-icon
+                                        class="icon_ p-2 border d-flex justify-content-center align-items-center rounded-circle"
+                                        icon="fa-brands fa-instagram" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- seconda card -->
+                        <div v-else-if="currentTeam == 1" class="col-12 col-lg-3 rounded-5 p-3 text-center">
+                            <div class="img_ p-3 rounded-circle">
+                                <img src="src/assets/img/team2.png" alt="team-2">
+                            </div>
+                            <div class="info_">
+                                <h3 class="purple_ my-4">Don Woods</h3>
+                                <p class="fw-lighter my-4">
+                                    Administrator
+                                </p>
+                                <div class="social_ d-flex justify-content-center gap-2 my-4">
+                                    <font-awesome-icon
+                                        class="icon_ p-2 border d-flex justify-content-center align-items-center rounded-circle"
+                                        icon="fa-brands fa-facebook-f" />
+                                    <font-awesome-icon
+                                        class="icon_ p-2 border d-flex justify-content-center align-items-center rounded-circle"
+                                        icon="fa-brands fa-twitter" />
+                                    <font-awesome-icon
+                                        class="icon_ p-2 border d-flex justify-content-center align-items-center rounded-circle"
+                                        icon="fa-brands fa-instagram" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- terza card -->
+                        <div v-else-if="currentTeam == 2" class="col-12 col-lg-3 rounded-5 p-3 text-center">
+                            <div class="img_ p-3 rounded-circle">
+                                <img src="src/assets/img/team2.png" alt="team-2">
+                            </div>
+                            <div class="info_">
+                                <h3 class="purple_ my-4">Tomas Nash</h3>
+                                <p class="fw-lighter my-4">
+                                    2d animator & Compositor
+                                </p>
+                                <div class="social_ d-flex justify-content-center gap-2 my-4">
+                                    <font-awesome-icon
+                                        class="icon_ p-2 border d-flex justify-content-center align-items-center rounded-circle"
+                                        icon="fa-brands fa-facebook-f" />
+                                    <font-awesome-icon
+                                        class="icon_ p-2 border d-flex justify-content-center align-items-center rounded-circle"
+                                        icon="fa-brands fa-twitter" />
+                                    <font-awesome-icon
+                                        class="icon_ p-2 border d-flex justify-content-center align-items-center rounded-circle"
+                                        icon="fa-brands fa-instagram" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- quarta card -->
+                        <div v-else-if="currentTeam == 3" class="col-12 col-lg-3 rounded-5 p-3 text-center">
+                            <div class="img_ p-3 rounded-circle">
+                                <img src="src/assets/img/team4.png" alt="team-4">
+                            </div>
+                            <div class="info_">
+                                <h3 class="purple_ my-4">Tomas Nash</h3>
+                                <p class="fw-lighter my-4">
+                                    2d animator & Compositor
+                                </p>
+                                <div class="social_ d-flex justify-content-center gap-2 my-4">
+                                    <font-awesome-icon
+                                        class="icon_ p-2 border d-flex justify-content-center align-items-center rounded-circle"
+                                        icon="fa-brands fa-facebook-f" />
+                                    <font-awesome-icon
+                                        class="icon_ p-2 border d-flex justify-content-center align-items-center rounded-circle"
+                                        icon="fa-brands fa-twitter" />
+                                    <font-awesome-icon
+                                        class="icon_ p-2 border d-flex justify-content-center align-items-center rounded-circle"
+                                        icon="fa-brands fa-instagram" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center align-items-center my-3">
+                            <div @click="changeCardBack2"
+                                class="arrow_ p-3 border rounded-circle d-flex align-items-center justify-content-center m-1 text-black-50">
+                                <font-awesome-icon icon="fa-solid fa-arrow-left" />
+                            </div>
+                            <button v-for="index in 4" :class="{ active: index === currentTeam }"
+                                @click="changeCardDot(index - 1)" class="dot_ rounded-circle border-0 p-2 mx-2"></button>
+                            <div @click="changeCardNext2"
                                 class="arrow_ p-3 border rounded-circle d-flex align-items-center justify-content-center m-1 text-black-50">
                                 <font-awesome-icon icon="fa-solid fa-arrow-right" />
                             </div>
@@ -224,11 +373,10 @@ export default {
         </div>
     </section>
 
-    <!-- quinta sezione -->
-    <section></section>
-
     <!-- sesta sezione -->
-    <section></section>
+    <section>
+
+    </section>
 
     <!-- settima sezione -->
     <section></section>
@@ -321,6 +469,12 @@ export default {
 }
 
 .four {
+
+    .rocket {
+        width: 20%;
+        height: 70%;
+    }
+
     .col-6 {
         position: relative;
 
@@ -355,6 +509,57 @@ export default {
             }
         }
     }
+}
+
+.five {
+    background-image: url(../assets/img/shape.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .container-fluid {
+        background-image: url(../assets/img/shape2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 100%;
+
+
+        h6 {
+            color: $violet;
+        }
+
+        .col-lg-3 {
+            background-color: #fff9f5;
+            position: relative;
+
+            img {
+                width: 50%;
+                position: absolute;
+                top: -100px;
+                left: 25%;
+            }
+        }
+
+        .info_ {
+            .social_ {
+                .icon_ {
+                    color: $violet;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+        }
+    }
+
+    button.dot_ {
+        width: 3px;
+        height: 3px;
+    }
+
+    .dot_:focus {
+        background-color: orange;
+    }
+
 }
 </style>
 

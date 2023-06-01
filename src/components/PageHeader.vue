@@ -26,10 +26,10 @@ export default {
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                     <div class="navbar-nav">
+                                        <!-- utilizzo il v-for per stampare tutti gli elementi passati dall'array creato nell App -->
                                         <a v-for="link in linkArray" class="nav-link text-white" href="#">
                                             {{ link.link }}
                                         </a>
-
                                         <button class="bg-white border-0 rounded-4 px-4">Get a Quote</button>
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@ export default {
             </div>
         </div>
     </section>
-    <!-- Title -->
+    <!-- Title and jumbo-->
     <section class="jumboSection">
         <div class="container">
             <div class="row justify-content-center">
@@ -63,7 +63,7 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="container-fluid jumbo_container d-none d-md-none d-lg-block">
+        <div class="container-fluid jumbo_container d-none d-lg-block">
             <div class="jumbo_ mx-auto my-0 rounded-5">
                 <img src="../assets/img/middle.png" alt="middle">
                 <div class="play_ d-flex align-items-center justify-content-center p-5 rounded-circle">

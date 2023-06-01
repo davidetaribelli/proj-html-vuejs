@@ -11,7 +11,7 @@ export default {
   },
   data() {
     return {
-      linkList: [
+      linkList: [    // creo un array delle voci di menù da passare alla pagina dell'header
         { link: "Home" },
         { link: "About Us" },
         { link: "Portfolio" },
@@ -29,6 +29,7 @@ export default {
 
 <template>
   <header>
+    <!-- creo una props per il collegamento all'header -->
     <PageHeader :linkArray="linkList" />
   </header>
   <main>

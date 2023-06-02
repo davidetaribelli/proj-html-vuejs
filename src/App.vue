@@ -20,6 +20,13 @@ export default {
         { link: "Blog" },
         { link: "Contact" },
       ],
+      linkListFooter: [    // creo un array delle voci di menù da passare alla pagina del footer
+        { link: "About Us" },
+        { link: "Portfolio" },
+        { link: "Pricing" },
+        { link: "career" },
+        { link: "Contact" },
+      ],
 
 
     }
@@ -36,7 +43,7 @@ export default {
     <PageMain />
   </main>
   <footer>
-    <PageFooter />
+    <PageFooter :arrayFooter="linkListFooter" />
   </footer>
 </template>
 

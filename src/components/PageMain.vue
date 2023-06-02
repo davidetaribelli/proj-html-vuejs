@@ -374,12 +374,63 @@ export default {
     </section>
 
     <!-- sesta sezione -->
-    <section>
-
+    <section class="six my-5">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-6 text-center my-5">
+                    <h6 class="fw-light">Why Anidio studio?</h6>
+                    <h2 class="fw-bolder purple_ fs-1">We Love Our Clients</h2>
+                    <p class="fw-lighter my-4">
+                        We are trusted throughout adland and have a wealth of recommendations from start-ups to renowned
+                        global brands.
+                    </p>
+                </div>
+                <div class="col-12 my-5">
+                    <div class="row justify-content-evelyn">
+                        <div class="col-2">
+                            <img src="../assets/img/sponsor5.png" alt="sponsor-5">
+                        </div>
+                        <div class="col-2">
+                            <img src="../assets/img/sponsor6.png" alt="sponsor-6">
+                        </div>
+                        <div class="col-2">
+                            <img src="../assets/img/sponsor1.png" alt="sponsor-1">
+                        </div>
+                        <div class="col-2">
+                            <img src="../assets/img/sponsor2.png" alt="sponsor-2">
+                        </div>
+                        <div class="col-2">
+                            <img src="../assets/img/sponsor3.png" alt="sponsor-3">
+                        </div>
+                        <div class="col-2">
+                            <img src="../assets/img/sponsor4.png" alt="sponsor-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- settima sezione -->
-    <section></section>
+    <section class="seven my-5">
+        <img class="w-100 d-block" src="../assets/img/shape-top.png" alt="shape-top">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-6 text-center my-4">
+                    <h6 class="fw-light">We Create New Worlds!</h6>
+                    <h2 class="fw-bolder text-white fs-1">Want Tips On Your Storytelling?</h2>
+                    <p class="fw-lighter text-white">
+                        Join our newsletter for tips on how to elevate your brand through storytelling
+                    </p>
+                </div>
+                <div class="col-7">
+                    <input type="email" class="w-100 p-3 rounded-5 border-0 my-5" placeholder="Enter your email">
+                    <button class="border-0 py-2 px-4 rounded-5">Submit</button>
+                </div>
+            </div>
+        </div>
+        <img class="w-100 d-block" src="../assets/img/shape-bottom.png" alt="shape-bottom">
+    </section>
 </template>
 
 <style scoped lang="scss">
@@ -581,6 +632,35 @@ export default {
         background-color: orange;
     }
 
+}
+
+.six {
+    .col-6 {
+        h6 {
+            color: $green;
+        }
+    }
+}
+
+.seven {
+    background-image: url(../assets/img/preloader.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h6 {
+        color: $green;
+    }
+
+    .col-7 {
+        position: relative;
+
+        button {
+            background-color: #ffdfed;
+            position: absolute;
+            right: 5%;
+            top: 37%;
+        }
+    }
 }
 </style>
 

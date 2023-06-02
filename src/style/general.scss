@@ -1,4 +1,15 @@
 $orange: #ff7a1f;
 $purple: #311852;
-$violet: #4d36dc;
+$green: #04e762;
 $light_violet: #f7f0ff;
+
+// Hover su arrow
+.arrow_:hover {
+    cursor: pointer;
+    background-color: $orange;
+}
+
+.icon_:hover {
+    cursor: pointer;
+    background-color: $orange;
+}

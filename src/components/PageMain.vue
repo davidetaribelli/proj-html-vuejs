@@ -409,16 +409,33 @@ export default {
         #bg_orange_gradient {
             background: rgb(255, 183, 134);
             background: linear-gradient(0deg, rgba(255, 183, 134, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+            &:hover {
+                background: rgb(255, 249, 245);
+                background: linear-gradient(0deg, rgba(255, 249, 245, 1) 0%, rgba(255, 183, 134, 1) 45%);
+            }
         }
+
+
 
         #bg_purple_gradient {
             background: rgb(174, 147, 210);
             background: linear-gradient(0deg, rgba(174, 147, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+            &:hover {
+                background: rgb(255, 249, 245);
+                background: linear-gradient(0deg, rgba(255, 249, 245, 1) 0%, rgba(174, 147, 210, 1) 47%);
+            }
         }
 
         #bg_pink_gradient {
             background: rgb(255, 222, 255);
             background: linear-gradient(0deg, rgba(255, 222, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+            &:hover {
+                background: rgb(255, 249, 245);
+                background: linear-gradient(0deg, rgba(255, 249, 245, 1) 0%, rgba(255, 222, 255, 1) 47%);
+            }
         }
     }
 
@@ -427,7 +444,7 @@ export default {
     }
 
     h5 {
-        color: $violet;
+        color: $green;
     }
 
     .rocket {
@@ -457,7 +474,7 @@ export default {
 .three {
     .col-6 {
         h6 {
-            color: $violet;
+            color: $green;
         }
     }
 
@@ -483,9 +500,11 @@ export default {
             position: absolute;
             left: -190px;
         }
+
+
     }
 
-    .col-5 {
+    .col-lg-5 {
         position: relative;
         display: flex;
 
@@ -509,6 +528,8 @@ export default {
             }
         }
     }
+
+
 }
 
 .five {
@@ -524,7 +545,7 @@ export default {
 
 
         h6 {
-            color: $violet;
+            color: $green;
         }
 
         .col-lg-3 {
@@ -542,7 +563,7 @@ export default {
         .info_ {
             .social_ {
                 .icon_ {
-                    color: $violet;
+                    color: $green;
                     width: 20px;
                     height: 20px;
                 }

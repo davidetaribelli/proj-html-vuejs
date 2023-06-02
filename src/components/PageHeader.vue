@@ -27,7 +27,7 @@ export default {
                                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                     <div class="navbar-nav">
                                         <!-- utilizzo il v-for per stampare tutti gli elementi passati dall'array creato nell App -->
-                                        <a v-for="link in linkArray" class="nav-link text-white" href="#">
+                                        <a v-for="link in linkArray" class="nav-link" href="#">
                                             {{ link.link }}
                                         </a>
                                         <button class="bg-white border-0 rounded-4 px-4">Get a Quote</button>
@@ -83,6 +83,21 @@ export default {
         background-repeat: no-repeat;
         background-size: 20%;
         background-position: 45% 100%;
+
+        .container-fluid {
+            .navbar-nav {
+                a {
+                    color: white;
+
+                    &:hover {
+                        color: $orange;
+
+                    }
+                }
+            }
+        }
+
+
     }
 }
 
@@ -171,8 +186,11 @@ export default {
 
 button {
     color: $purple;
-    -webkit-box-shadow: 0px 10px 13px -7px #FFFFFF, 7px 0px 29px 0px rgba(255, 255, 255, 0.5);
-    box-shadow: 0px 10px 13px -7px #FFFFFF, 7px 0px 29px 0px rgba(255, 255, 255, 0);
+
+    &:hover {
+        -webkit-box-shadow: 0px 10px 13px -7px #FFFFFF, 7px 0px 29px 0px rgba(255, 255, 255, 0.5);
+        box-shadow: 0px 10px 13px -7px #FFFFFF, 7px 0px 29px 0px rgba(255, 255, 255, 0);
+    }
 }
 
 h6.orange_ {
